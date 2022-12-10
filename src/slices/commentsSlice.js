@@ -17,7 +17,7 @@ const commentsSlice = createSlice({
 });
 
 export const selectors = commentsAdapter.getSelectors(
-  (state) => state.comments
+  (state) => state.commentsReducer
 );
 export const { actions } = commentsSlice;
 export default commentsSlice.reducer;
