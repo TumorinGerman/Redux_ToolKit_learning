@@ -1,9 +1,16 @@
-import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../slices/counterSlice.js";
+// @ts-check
 
+import { configureStore } from "@reduxjs/toolkit";
+import postsReducer from "./postsSlice.js";
+import commentsReducer from "./commentsSlice.js";
+import usersReducer from "./usersSlice.js";
+
+// BEGIN (write your solution here)
 export default configureStore({
   reducer: {
-    // counter – это свойство будет внутри объекта общего состояния: state.counter
-    counter: counterReducer,
+    usersReducer,
+    postsReducer,
+    commentsReducer,
   },
 });
+// END
